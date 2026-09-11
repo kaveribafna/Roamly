@@ -40,7 +40,7 @@ export const HomePage: React.FC = () => {
             <div className="lg:col-span-6 space-y-6 text-left">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F5EBDD] border border-[#E6D5BE] text-[#12372A] text-xs font-bold tracking-wider uppercase shadow-xs">
                 <Sparkles className="w-3.5 h-3.5 text-[#F28C28]" />
-               
+               <span>TRIPS TAILORED • MOMENTS TO REMEMBER</span>
               </div>
 
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#12372A] leading-[1.12]">
