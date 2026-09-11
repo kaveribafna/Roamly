@@ -1,8 +1,16 @@
 import { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import {
+  HashRouter,
+  Routes,
+  Route,
+  useLocation,
+  Navigate,
+} from 'react-router-dom';
+
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { ToastContainer } from './components/ui/ToastContainer';
+
 import { HomePage } from './pages/HomePage';
 import { PlannerPage } from './pages/PlannerPage';
 import { GeneratingScreen } from './pages/GeneratingScreen';
@@ -23,10 +31,12 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
+
       <div className="min-h-screen flex flex-col bg-[#FAFAF7] text-[#1D2521] selection:bg-[#F28C28]/20 selection:text-[#12372A]">
         <Navbar />
+
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -36,13 +46,15 @@ function App() {
             <Route path="/staycations" element={<StaycationPage />} />
             <Route path="/destinations" element={<DestinationsPage />} />
             <Route path="/saved" element={<SavedTripsPage />} />
+
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
+
         <Footer />
         <ToastContainer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
